@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="pomis.app.salemoveshop.fragments.SearchFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="@color/colorAccent"
+
+        android:text="Tartu, Estonia" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/met_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="Search for goods"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        app:met_baseColor="@color/colorAccent"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="Год выпуска"
+        app:met_iconLeft="@drawable/ic_search"
+        app:met_iconPadding="0dp"
+        app:met_primaryColor="@color/colorAccent"
+        app:met_singleLineEllipsis="true"
+        app:met_textColor="@color/colorAccent"
+        app:met_textColorHint="@color/colorAccent"
+        app:met_underlineColor="@color/colorAccent" />
+
+
+    <com.mindorks.placeholderview.PlaceHolderView
+        android:id="@+id/phv_categories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

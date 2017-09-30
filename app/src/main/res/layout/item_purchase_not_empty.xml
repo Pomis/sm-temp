@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="160dp"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_marginTop="40dp"
+        android:layout_width="160dp"
+        android:layout_height="4dp"
+        android:background="@color/colorPrimaryDark"/>
+
+    <View
+        android:layout_marginTop="37.5dp"
+        android:layout_marginLeft="75dp"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/background_circle"/>
+
+    <TextView
+        android:id="@+id/tv_row_date"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_horizontal"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    <com.mindorks.placeholderview.PlaceHolderView
+        android:layout_marginTop="50dp"
+        android:id="@+id/phv_purhases"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
