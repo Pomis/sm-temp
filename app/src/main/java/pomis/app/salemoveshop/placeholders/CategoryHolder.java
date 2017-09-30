@@ -2,6 +2,7 @@ package pomis.app.salemoveshop.placeholders;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mindorks.placeholderview.Animation;
@@ -28,11 +29,17 @@ public class CategoryHolder {
 
     public ArrayList<GoodHolder> goods;
 
+    public int bg;
+
     @View(R.id.tv_row_category_name)
     transient private TextView tvName;
 
     @View(R.id.tv_row_category_count)
     transient private TextView tvDescription;
+
+    @View(R.id.iv_row_background)
+    transient private ImageView ivBg;
+
 
     transient PlaceHolderView phv;
 
@@ -41,18 +48,27 @@ public class CategoryHolder {
         this.descr = descr;
     }
 
-    public CategoryHolder(String name, String descr, Context context, ArrayList<GoodHolder> goods, PlaceHolderView phv) {
+    public CategoryHolder(String name, String descr, Context context, ArrayList<GoodHolder> goods,
+                          PlaceHolderView phv, int background) {
         this.name = name;
         this.descr = descr;
         this.context = context;
         this.goods = goods;
         this.phv = phv;
+        this.bg = background;
+    }
+
+    public CategoryHolder(String name, String descr, Context context, int bg) {
+        this.name = name;
+        this.descr = descr;
+        this.context = context;
+        this.bg = bg;
     }
 
     @Resolve
     void onResolve() {
         tvName.setText(name);
-
+        if (bg!=0) ivBg.setImageDrawable(context.getResources().getDrawable(bg));
         tvDescription.setText(descr);
     }
 

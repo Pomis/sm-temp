@@ -10,50 +10,108 @@
 
         <ImageView
             android:id="@+id/iv_photo"
-            android:layout_margin="8dp"
             android:layout_width="0dp"
-            android:scaleType="centerCrop"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
             android:layout_weight="1"
-            android:layout_height="150dp" />
+            android:scaleType="centerCrop" />
 
         <TextView
-            android:layout_margin="8dp"
-            android:textColor="#000"
-            android:text="Available in 17 shops"
-            android:textSize="17dp"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="150dp" />
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="Available in 17 shops"
+            android:textColor="#000"
+            android:textSize="17dp" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/tv_cost"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="€17."
-        android:textSize="30dp"
-        android:padding="16dp"
-        android:textColor="@color/colorAccent"
-        android:layout_marginTop="100dp"
         android:layout_alignParentRight="true"
-        />
+        android:layout_marginTop="100dp"
+        android:padding="16dp"
+        android:text="€17."
+        android:textColor="@color/colorAccent"
+        android:textSize="30dp" />
 
     <TextView
-        android:layout_marginTop="160dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:id="@+id/tv_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="lorem ipsum epsognk sjdlksdhjk hgskj dfhgkj dfhgkl s hlsdkjhs gdkjgf sdfgkjdhfg sjkfg jkdsgf kjdfgjkdshfgl dgjkdfgdfgh dlkhesiugheiurgdjfkbgdjfkgbfjkifghoiewo rjkgfjk ld"/>
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="160dp"
+        android:text="lorem ipsum epsognk sjdlksdhjk hgskj dfhgkj dfhgkl s hlsdkjhs gdkjgf sdfgkjdhfg sjkfg jkdsgf kjdfgjkdshfgl dgjkdfgdfgh dlkhesiugheiurgdjfkbgdjfkgbfjkifghoiewo rjkgfjk ld" />
+
+    <LinearLayout
+        android:id="@+id/ll_days"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:layout_below="@+id/tv_description">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Mon" />
+        <TextView
+            android:gravity="center"
+
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Tue" />
+        <TextView
+            android:gravity="center"
+
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Wed" />
+        <TextView
+            android:gravity="center"
+
+            android:id="@+id/tv_selected"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Thu" />
+        <TextView
+            android:gravity="center"
+
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Fri" />
+        <TextView
+            android:gravity="center"
+
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Sat" />
+        <TextView
+            android:gravity="center"
+
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Sun" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/b_order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Order"
-        android:textSize="20dp"
         android:layout_below="@+id/tv_description"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:text="Order"
+        android:textSize="20dp" />
 
 </RelativeLayout>

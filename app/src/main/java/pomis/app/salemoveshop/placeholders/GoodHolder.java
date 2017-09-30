@@ -62,8 +62,8 @@ public class GoodHolder implements Serializable {
     public GoodHolder(String name, String descr, int backgroundImage, Context context) {
         this.name = name;
         this.descr = descr;
-        this.backgroundImage = backgroundImage;
         this.context = context;
+        this.backgroundImage = backgroundImage;
 
     }
 

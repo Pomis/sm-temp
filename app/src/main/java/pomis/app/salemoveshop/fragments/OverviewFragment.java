@@ -9,10 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 import pomis.app.salemoveshop.R;
 import pomis.app.salemoveshop.activities.CallActivity;
@@ -32,6 +34,10 @@ public class OverviewFragment extends Fragment {
     Unbinder unbinder;
     @BindView(R.id.b_order)
     Button bOrder;
+    @BindView(R.id.tv_selected)
+    TextView tvSelected;
+    @BindView(R.id.ll_days)
+    LinearLayout llDays;
 
     public OverviewFragment(GoodHolder goodHolder) {
         this.goodHolder = goodHolder;
@@ -67,7 +73,7 @@ public class OverviewFragment extends Fragment {
                 try {
                     Thread.sleep(3500);
                     getActivity().runOnUiThread(() -> CallActivity.start(getActivity())
-);
+                    );
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -79,5 +85,11 @@ public class OverviewFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+    }
+
+    @OnClick(R.id.ll_days)
+    void onClick() {
+        tvSelected.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        tvSelected.setTextColor(getResources().getColor(R.color.colorWhite));
     }
 }

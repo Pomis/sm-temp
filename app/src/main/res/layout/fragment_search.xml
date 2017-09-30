@@ -14,21 +14,21 @@
         android:gravity="center"
         android:padding="8dp"
         android:textColor="@color/colorAccent"
-
         android:text="Tartu, Estonia" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/met_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="-8dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginRight="24dp"
         android:hint="Search for goods"
         android:textColor="@color/colorAccent"
         android:textColorHint="@color/colorAccent"
         app:met_baseColor="@color/colorAccent"
         app:met_floatingLabel="highlight"
-        app:met_floatingLabelText="Год выпуска"
+        app:met_floatingLabelText="Search for goods"
         app:met_iconLeft="@drawable/ic_search"
         app:met_iconPadding="0dp"
         app:met_primaryColor="@color/colorAccent"
