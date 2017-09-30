@@ -23,12 +23,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
             <ImageView
                 android:layout_alignParentRight="true"
                 android:src="@drawable/sale_move"
                 android:layout_width="130dp"
                 android:scaleType="centerInside"
                 android:layout_height="30dp" />
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.Large.MultiplePulseRing"
+                android:layout_width="match_parent"
+                android:alpha="0.3"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+
+                app:SpinKit_Color="@color/colorAccent" />
 
             <TextView
                 android:text="Operator calling"

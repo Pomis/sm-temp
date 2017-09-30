@@ -2,6 +2,7 @@ package pomis.app.salemoveshop.fragments;
 
 
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -16,9 +17,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import pomis.app.salemoveshop.App;
 import pomis.app.salemoveshop.R;
 import pomis.app.salemoveshop.activities.CallActivity;
 import pomis.app.salemoveshop.placeholders.GoodHolder;
+
+import static android.view.View.GONE;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -70,15 +74,17 @@ public class OverviewFragment extends Fragment {
         if (goodHolder.full_descr != null) tvDescription.setText(goodHolder.full_descr);
         bOrder.setOnClickListener((v) -> {
             new Thread(() -> {
+                final Context context = getActivity().getApplication().getApplicationContext();
                 try {
                     Thread.sleep(3500);
-                    getActivity().runOnUiThread(() -> CallActivity.start(getActivity())
-                    );
+                    CallActivity.start(context);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }).start();
         });
+        if (!goodHolder.name.equals("Eggs"))
+            llDays.setVisibility(GONE);
     }
 
     @Override

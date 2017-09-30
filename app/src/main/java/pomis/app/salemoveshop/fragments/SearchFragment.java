@@ -90,7 +90,7 @@ public class SearchFragment extends Fragment {
     }
 
 
-    private void initCategoryList() {
+    public void initCategoryList() {
         phvCategories.removeAllViews();
         phvCategories.refresh();
         phvCategories.getBuilder().setLayoutManager(new GridLayoutManager(getActivity(), 1));
